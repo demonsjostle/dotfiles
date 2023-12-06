@@ -1,0 +1,10 @@
+.DS_Store
+coc
+configstore
+iterm2
+psysh
+shopify
+wireshark
+yarn
+fish/fish_variables
+tmux/plugins/
