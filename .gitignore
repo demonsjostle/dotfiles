@@ -7,4 +7,5 @@ shopify
 wireshark
 yarn
 fish/fish_variables
+fish/config-local.fish
 tmux/plugins/
