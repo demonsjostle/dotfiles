@@ -25,10 +25,10 @@ null_ls.setup {
     -- }),
     -- null_ls.builtins.diagnostics.clang_check,
     -- null_ls.builtins.formatting.yapf, #error when use thai language
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }),
-    -- null_ls.builtins.diagnostics.fish
+    -- null_ls.builtins.diagnostics.eslint_d.with({
+    --   diagnostics_format = '[eslint_d] #{m}\n(#{c})'
+    -- }),
+    null_ls.builtins.diagnostics.fish,
     null_ls.builtins.diagnostics.zsh
   },
   on_attach = function(client, bufnr)
