@@ -8,4 +8,5 @@ wireshark
 yarn
 fish/fish_variables
 fish/config-local.fish
+fish/fishd.tmp.*
 tmux/plugins/
