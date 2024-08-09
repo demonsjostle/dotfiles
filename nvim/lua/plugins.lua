@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
 
   -- Dashboard nvim
   use {
-    'glepnir/dashboard-nvim',
+    'nvimdev/dashboard-nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
@@ -45,7 +45,7 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'nvimdev/lspsaga.nvim' -- LSP UIs
 
   -- For help to install other LSP servers, etc.
   use 'williamboman/mason.nvim'
