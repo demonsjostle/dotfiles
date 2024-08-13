@@ -8,7 +8,3 @@ poimandres.setup {
 
 
 }
-
-
--- enable scheme
-vim.cmd('colorscheme poimandres')

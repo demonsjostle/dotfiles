@@ -31,9 +31,10 @@ return require('packer').startup(function(use)
   use 'svrana/neosolarized.nvim'
   use 'tjdevries/colorbuddy.nvim'
   --use 'tjdevries/gruvbuddy.nvim'
-  --  use 'olivercederborg/poimandres.nvim'
-  -- use { "catppuccin/nvim", as = "catppuccin" }
-  -- use "EdenEast/nightfox.nvim"
+  use 'olivercederborg/poimandres.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use "EdenEast/nightfox.nvim"
+  use "folke/tokyonight.nvim"
 
   -- Statusline
   -- use 'nvim-lualine/lualine.nvim'

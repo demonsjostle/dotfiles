@@ -45,6 +45,3 @@ catppuccin.setup({
   },
 
 })
-
--- setup must be called before loading
-vim.cmd.colorscheme "catppuccin-frappe" -- catppuccin catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha

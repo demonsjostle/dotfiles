@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -169,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
     url = "https://github.com/svrana/neosolarized.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nui.nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nui.nvim",
@@ -249,6 +259,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["poimandres.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
+    url = "https://github.com/olivercederborg/poimandres.nvim"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -258,6 +273,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["windline.nvim"] = {
     loaded = true,
