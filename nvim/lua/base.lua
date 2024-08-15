@@ -49,4 +49,10 @@ vim.opt.formatoptions:append { 'r' }
 
 
 -- Theme
-vim.cmd [[colorscheme tokyonight]]
+-- Set colorscheme after plugins have loaded
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    -- Set your colorscheme here
+    vim.cmd("colorscheme tokyonight")
+  end,
+})

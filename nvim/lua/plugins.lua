@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use "EdenEast/nightfox.nvim"
   use "folke/tokyonight.nvim"
+  use { "scottmckendry/cyberdream.nvim" }
 
   -- Statusline
   -- use 'nvim-lualine/lualine.nvim'

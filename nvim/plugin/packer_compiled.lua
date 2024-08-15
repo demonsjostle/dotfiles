@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["cyberdream.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
