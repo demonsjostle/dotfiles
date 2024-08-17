@@ -1,4 +1,1 @@
-local status, autotag = pcall(require, "nvim-ts-autotag")
-if (not status) then return end
-
-autotag.setup({})
+local TagConfigs = require("nvim-ts-autotag.config.init")
