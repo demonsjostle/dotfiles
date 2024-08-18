@@ -26,9 +26,3 @@
 ## For Window
 
 ## For WSL
-
-![Funny GIF](https://i.gifer.com/embedded/download/1Cr1.gif)
-
-<div style="text-align: center;">
-    <img src="https://i.gifer.com/embedded/download/1Cr1.gif" alt="Funny GIF">
-</div>
