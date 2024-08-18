@@ -50,7 +50,7 @@ dashboard.setup({
     },
     footer = {
       -- "🚀 Ready to code! ",
-      -- "  Neovim version: " .. vim.version().major .. "." .. vim.version().minor,
+      "  Neovim version: " .. vim.version().major .. "." .. vim.version().minor,
       -- "Stay productive! 🧠",
       "🚀 Let's get coding!",
       "🌱 'Success is not final, failure is not fatal: It is the courage to continue that counts.' – Winston Churchill",
