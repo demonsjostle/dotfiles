@@ -119,6 +119,11 @@ return require('packer').startup(function(use)
     }
   })
 
+  -- Notification
+  use { "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim" } }
+  use 'rcarriga/nvim-notify'
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
