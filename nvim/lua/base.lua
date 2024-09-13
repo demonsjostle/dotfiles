@@ -53,6 +53,6 @@ vim.opt.formatoptions:append { 'r' }
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     -- Set your colorscheme here
-    vim.cmd("colorscheme tokyonight")
+    vim.cmd("colorscheme catppuccin")
   end,
 })
