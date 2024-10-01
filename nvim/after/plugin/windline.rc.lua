@@ -39,23 +39,23 @@ utils.change_mode_name({
   ['niI'] = { ' NORMAL', 'Normal' },
   ['niR'] = { ' NORMAL', 'Normal' },
   ['niV'] = { ' NORMAL', 'Normal' },
-  ['v'] = { ' VISUAL', 'Visual' },
-  ['V'] = { ' V-LINE', 'Visual' },
-  [''] = { ' V-BLOCK', 'Visual' },
+  ['v'] = { '󰍳 VISUAL', 'Visual' },
+  ['V'] = { '󰍳 V-LINE', 'Visual' },
+  [''] = { '󰍳 V-BLOCK', 'Visual' },
   ['s'] = { ' SELECT', 'Visual' },
   ['S'] = { ' S-LINE', 'Visual' },
   [''] = { ' S-BLOCK', 'Visual' },
   ['i'] = { ' INSERT', 'Insert' },
   ['ic'] = { ' INSERT', 'Insert' },
   ['ix'] = { ' INSERT', 'Insert' },
-  ['R'] = { ' REPLACE', 'Replace' },
-  ['Rc'] = { ' REPLACE', 'Replace' },
+  ['R'] = { '󰟈 REPLACE', 'Replace' },
+  ['Rc'] = { '󰟈 REPLACE', 'Replace' },
   ['Rv'] = { 'V-REPLACE', 'Normal' },
-  ['Rx'] = { ' REPLACE', 'Normal' },
+  ['Rx'] = { '󰟈 REPLACE', 'Normal' },
   ['c'] = { ' COMMAND', 'Command' },
   ['cv'] = { ' COMMAND', 'Command' },
   ['ce'] = { ' COMMAND', 'Command' },
-  ['r'] = { ' REPLACE', 'Replace' },
+  ['r'] = { '󰟈 REPLACE', 'Replace' },
   ['rm'] = { ' MORE', 'Normal' },
   ['r?'] = { ' CONFIRM', 'Normal' },
   ['!'] = { ' SHELL', 'Normal' },
@@ -115,9 +115,9 @@ basic.git_branch = {
   text = function(bufnr)
     if git_comps.is_git(bufnr) then
       return {
-        { sep.right_rounded, state.mode[2] .. 'Sep' },
+        { sep.right_rounded,      state.mode[2] .. 'Sep' },
         { git_comps.git_branch(), 'default' },
-        { sep.right_rounded, 'right_sep' },
+        { sep.right_rounded,      'right_sep' },
       }
     end
     return {
@@ -183,17 +183,16 @@ basic.file_info = {
   },
   text = function(bufnr)
     return {
-      { sep.left_rounded, 'left_sep' },
-      { ' ', 'default' },
-      { b_components.file_type({ icon = true }), 'default' },
-      { ' ', '' },
-      { b_components.file_encoding(), 'default' },
-      { ' ', '' },
+      { sep.left_rounded,                          'left_sep' },
+      { ' ',                                       'default' },
+      { b_components.file_type({ icon = true }),   'default' },
+      { ' ',                                       '' },
+      { b_components.file_encoding(),              'default' },
+      { ' ',                                       '' },
       { b_components.file_format({ icon = true }), 'default' },
-      { ' ', '' },
+      { ' ',                                       '' },
 
     }
-
   end
 }
 
@@ -206,8 +205,8 @@ basic.cursor_info = {
   text = function()
     return {
       { sep.left_rounded, 'left_sep' },
-      { [[ %3l:%-2c ]], 'default' }, --line_col
-      { [[%3p%% ]], 'default' } -- Progress
+      { [[ %3l:%-2c ]],   'default' }, --line_col
+      { [[%3p%% ]],       'default' }  -- Progress
 
     }
   end
@@ -233,11 +232,11 @@ basic.typing_animation = {
   text = function(bufnr, winid, width)
     if width > 80 then
       return {
-        { ' ' .. sep.left_rounded, 'waveright1' },
-        { ' ' .. sep.left_rounded, 'waveright2' },
-        { ' ' .. sep.left_rounded, 'waveright3' },
-        { ' ' .. sep.left_rounded, 'waveright4' },
-        { ' ' .. sep.left_rounded, 'waveright5' },
+        { ' ' .. sep.left_rounded,  'waveright1' },
+        { ' ' .. sep.left_rounded,  'waveright2' },
+        { ' ' .. sep.left_rounded,  'waveright3' },
+        { ' ' .. sep.left_rounded,  'waveright4' },
+        { ' ' .. sep.left_rounded,  'waveright5' },
         -- { ' ' .. sep.left_rounded, { 'black', 'waveright5' } },
         -- { sep.right_rounded .. ' ', { 'black_light', 'waveleft1' } },
         { sep.right_rounded .. ' ', 'waveleft1' },
@@ -375,7 +374,6 @@ local animation_control = function()
       vim.cmd.redrawstatus()
     end
   })
-
 end
 
 
@@ -384,7 +382,6 @@ end
 _G.AnimationOnInsertEnter = function()
   -- Action to perform when entering insert mode
   animation_control()
-
 end
 
 _G.AnimationOnInsertLeave = function()
