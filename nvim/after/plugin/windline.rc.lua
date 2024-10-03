@@ -1,10 +1,6 @@
 local status, windline = pcall(require, "windline")
 if (not status) then return end
 
--- clear default
--- vim.opt.showmode = false
-
---
 local helper = require('windline.helpers')
 local utils = require('windline.utils')
 local b_components = require('windline.components.basic')
@@ -13,6 +9,7 @@ local git_rev_components = require('windline.components.git_rev')
 local sep = helper.separators
 local animation = require('wlanimation')
 local efffects = require('wlanimation.effects')
+local theme_colors = require('windline.themes').load_theme("wind")
 
 local state = _G.WindLine.state
 
@@ -77,7 +74,7 @@ basic.vi_mode = {
     ReplaceSep = { 'cyan', 'GitbranchBg' },
     CommandSep = { 'yellow', 'GitbranchBg' },
   },
-  text = function()
+  text = function(bufnr, winid, width)
     if state.mode[2] == 'Insert' then
       return { { ' ' .. luffy_text .. ' INSERT ', state.mode[2] }, }
     end
@@ -137,7 +134,14 @@ basic.file_name = {
     right_sep = { 'FilenameBg', 'NormalBg' }
   },
 
-  text = function(bufnr)
+  text = function(bufnr, windid, width)
+    if width < 150 then
+      return {
+        { ' ',                      '' },
+        { b_components.file_name(), 'default' },
+        { sep.right_rounded,        'right_sep' },
+      }
+    end
     return {
       -- { sep.right_rounded, 'right_sep' },
       { ' ', '' },
@@ -150,14 +154,12 @@ basic.file_name = {
   end
 }
 
-
-
 basic.git = {
   name = 'git',
   hl_colors = {
-    green = { 'green', 'NormalBg' },
+    green = { 'green_light', 'NormalBg' },
     red = { 'red', 'NormalBg' },
-    blue = { 'blue', 'NormalBg' },
+    yellow = { 'yellow_light', 'NormalBg' },
     git_rev_color = { 'yellow', 'NormalBg' }
   },
   text = function(bufnr)
@@ -167,7 +169,7 @@ basic.git = {
         { git_rev_components.git_rev({ format = " ⇡%s⇣%s", interval = 10000 }), 'git_rev_color' },
         { git_comps.diff_added({ format = '  %s', show_zero = true }), 'green' },
         { git_comps.diff_removed({ format = '  %s', show_zero = true }), 'red' },
-        { git_comps.diff_changed({ format = ' 柳%s', show_zero = true }), 'blue' },
+        { git_comps.diff_changed({ format = '  %s', show_zero = true }), 'yellow' },
         { ' ', '' }
       }
     end
@@ -181,7 +183,10 @@ basic.file_info = {
     default = { 'FileInfoFg', 'FileInfoBg' },
     left_sep = { 'FileInfoBg', 'NormalBg' }
   },
-  text = function(bufnr)
+  text = function(bufnr, windid, width)
+    if width < 70 then
+      return { { b_components.file_type({ icon = true }), 'default' }, }
+    end
     return {
       { sep.left_rounded,                          'left_sep' },
       { ' ',                                       'default' },
@@ -202,7 +207,10 @@ basic.cursor_info = {
     default = { 'CursorInfoFg', 'CursorInfoBg' },
     left_sep = { 'CursorInfoBg', 'FileInfoBg' }
   },
-  text = function()
+  text = function(bufnr, winid, width)
+    if width < 85 then
+      return ''
+    end
     return {
       { sep.left_rounded, 'left_sep' },
       { [[ %3l:%-2c ]],   'default' }, --line_col
@@ -230,7 +238,7 @@ basic.typing_animation = {
     waveleft5 = { 'waveleft5', 'wavedefault' }
   },
   text = function(bufnr, winid, width)
-    if width > 80 then
+    if width > 100 then
       return {
         { ' ' .. sep.left_rounded,  'waveright1' },
         { ' ' .. sep.left_rounded,  'waveright2' },
@@ -279,14 +287,38 @@ local default = {
 
 windline.setup({
   colors_name = function(colors)
-    colors.FilenameFg = colors.black_light
-    colors.FilenameBg = colors.white
-    colors.GitbranchFg = colors.black_light
-    colors.GitbranchBg = '#F8482C'
-    colors.CursorInfoFg = colors.white
-    colors.CursorInfoBg = colors.black
-    colors.FileInfoFg = colors.white_light
-    colors.FileInfoBg = colors.black_light
+    colors.FilenameFg = theme_colors.black_light
+    colors.FilenameBg = theme_colors.white
+    colors.GitbranchFg = theme_colors.black_light
+    colors.GitbranchBg = theme_colors.cyan_light
+    colors.CursorInfoFg = theme_colors.white
+    colors.CursorInfoBg = theme_colors.blue_light
+    colors.FileInfoFg = theme_colors.white_light
+    colors.FileInfoBg = theme_colors.black_light
+
+    colors.NormalBg = theme_colors.NormalBg
+    colors.NormalFg = theme_colors.NormalFg
+    colors.ActiveBg = theme_colors.ActiveBg
+    colors.ActiveFg = theme_colors.ActiveFg
+    colors.InactiveBg = theme_colors.InactiveBg
+    colors.InactiveFg = theme_colors.InactiveFg
+
+    colors.black = theme_colors.black
+    colors.red = theme_colors.red
+    colors.green = theme_colors.green
+    colors.yellow = theme_colors.yellow
+    colors.blue = theme_colors.blue
+    colors.magenta = theme_colors.magenta
+    colors.cyan = theme_colors.cyan
+    colors.white = theme_colors.white
+    colors.black_light = theme_colors.black_light
+    colors.red_light = theme_colors.red_light
+    colors.yellow_light = theme_colors.yellow_light
+    colors.blue_light = theme_colors.blue_light
+    colors.magenta_light = theme_colors.magenta_light
+    colors.green_light = theme_colors.green_light
+    colors.cyan_light = theme_colors.cyan_light
+    colors.white_light = theme_colors.white_light
 
     colors.wavedefault = colors.NormalBg
     colors.waveleft1 = colors.wavedefault
@@ -365,6 +397,7 @@ local animation_control = function()
 
   local luffy = { '􏾾', '􏾿', '􏿀', '􏿁', '􏿂', '􏿃' }
   animation.basic_animation({
+    type = "basic",
     timeout = nil,
     delay = 200,
     interval = 200,
