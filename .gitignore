@@ -11,3 +11,4 @@ fish/config-local.fish
 fish/fishd.tmp.*
 tmux/plugins/
 omf/
+weechat/
