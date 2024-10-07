@@ -15,8 +15,8 @@ lspconfig.setup {
   ensure_installed = {
     "cssls",
     "lua_ls",
-    "tsserver",
     "pyright",
+    "ts_ls",
     "clangd",
     "jsonls"
   },
