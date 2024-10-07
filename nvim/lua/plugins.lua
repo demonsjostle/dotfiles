@@ -124,7 +124,18 @@ return require('packer').startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-
+  -- Game
+  use { "seandewar/killersheep.nvim" }
+  use { "rktjmp/playtime.nvim" }
+  use {
+    'jim-fx/sudoku.nvim',
+    cmd = "Sudoku",
+    config = function()
+      require("sudoku").setup({
+        -- configuration ...
+      })
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
