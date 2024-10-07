@@ -17,7 +17,6 @@ vim.cmd([[
 
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
-
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -56,13 +55,13 @@ return require('packer').startup(function(use)
   use 'jay-babu/mason-null-ls.nvim'
 
   -- Autocomplete
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
-  use 'hrsh7th/cmp-path' -- for filesystem paths.
-  use 'L3MON4D3/LuaSnip' -- Snippet
+  use 'hrsh7th/cmp-buffer'           -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp'         -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp'             -- Completion
+  use 'hrsh7th/cmp-path'             -- for filesystem paths.
+  use 'L3MON4D3/LuaSnip'             -- Snippet
   use "rafamadriz/friendly-snippets" --Snippet from vscode
-  use 'saadparwaiz1/cmp_luasnip' --Snippet
+  use 'saadparwaiz1/cmp_luasnip'     --Snippet
 
   -- Syntax highlightings
   use {
@@ -122,6 +121,9 @@ return require('packer').startup(function(use)
   -- Notification
   use { "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim" } }
   use 'rcarriga/nvim-notify'
+
+  -- Markdown Preview
+  use { 'iamcco/markdown-preview.nvim' }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
