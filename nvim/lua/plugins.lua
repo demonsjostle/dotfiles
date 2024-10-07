@@ -98,10 +98,6 @@ return require('packer').startup(function(use)
 
 
   use 'folke/zen-mode.nvim'
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
 
   -- Debuger
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
@@ -123,7 +119,11 @@ return require('packer').startup(function(use)
   use 'rcarriga/nvim-notify'
 
   -- Markdown Preview
-  use { 'iamcco/markdown-preview.nvim' }
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim
