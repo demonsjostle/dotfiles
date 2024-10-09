@@ -249,6 +249,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
+  },
   ["nvim-notify"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nvim-notify",
