@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/killersheep.nvim",
     url = "https://github.com/seandewar/killersheep.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/lspkind-nvim",

@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'nvimdev/lspsaga.nvim' -- LSP UIs
+  use 'folke/lsp-colors.nvim'
 
   -- For help to install other LSP servers, etc.
   use 'williamboman/mason.nvim'
