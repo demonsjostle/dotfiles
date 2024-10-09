@@ -18,3 +18,8 @@ end
 dap.listeners.before.event_exited.dapui_config = function()
   dapui.close()
 end
+
+
+-- Keymaps
+vim.keymap.set('n', '<leader>dt', dap.toggle_breakpoint, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dc', dap.continue, { noremap = true, silent = true })
