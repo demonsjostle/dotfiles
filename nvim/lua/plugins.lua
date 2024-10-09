@@ -99,9 +99,10 @@ return require('packer').startup(function(use)
 
   use 'folke/zen-mode.nvim'
 
-  -- Debuger
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  -- Debugging
   use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use 'mfussenegger/nvim-dap-python'
 
 
   -- Chat GPT
