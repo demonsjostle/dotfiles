@@ -26,7 +26,8 @@ lspconfig.setup {
 
 dap.setup {
   ensure_installed = {
-    'codelldb'
+    'codelldb',
+    'debugpy'
   },
   automatic_installation = true,
   handlers = {
