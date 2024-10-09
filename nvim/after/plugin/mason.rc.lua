@@ -18,7 +18,8 @@ lspconfig.setup {
     "pyright",
     "ts_ls",
     "clangd",
-    "jsonls"
+    "jsonls",
+    "tailwindcss"
   },
   automatic_installation = true
 }
