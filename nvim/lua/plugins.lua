@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'jay-babu/mason-nvim-dap.nvim'
-  use 'jay-babu/mason-null-ls.nvim'
+
 
   -- Autocomplete
   use 'hrsh7th/cmp-buffer'           -- nvim-cmp source for buffer words
