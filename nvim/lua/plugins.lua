@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- Code Formatters and Linters
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
