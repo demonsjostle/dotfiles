@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["cyberdream.nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/cyberdream.nvim",
@@ -159,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["mason-conform.nvim"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/mason-conform.nvim",
+    url = "https://github.com/zapling/mason-conform.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -168,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
     url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
+  },
+  ["mason-nvim-lint"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/mason-nvim-lint",
+    url = "https://github.com/rshkarin/mason-nvim-lint"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -233,6 +248,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/Users/demonsjostle/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

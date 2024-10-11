@@ -52,6 +52,8 @@ return require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'jay-babu/mason-nvim-dap.nvim'
+  use "rshkarin/mason-nvim-lint"
+  use "zapling/mason-conform.nvim"
 
 
   -- Autocomplete
@@ -85,7 +87,8 @@ return require('packer').startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- Code Formatters and Linters
-
+  use 'mfussenegger/nvim-lint'
+  use 'stevearc/conform.nvim'
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
