@@ -52,7 +52,11 @@ lint.setup({
 		"vale",
 		"eslint_d",
 		"hadolint",
+		"pylint",
+		"cpplint",
+		"jsonlint",
 	},
+	automatic_installation = true,
 })
 
 formatter.setup({
@@ -61,4 +65,5 @@ formatter.setup({
 		"prettierd",
 		"autopep8",
 	},
+	automatic_installation = true,
 })
