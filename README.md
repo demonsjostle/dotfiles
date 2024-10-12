@@ -8,8 +8,11 @@
 
 ## Configs Support
 - **Tmux**: version >= 3.3a
+![Tmux Setup](./images/tmux.png)
 - **Fish Shell**: version >= 3.6.4
+![Fish Setup](./images/fish.png)
 - **Neovim**: version >= 0.10.1
+![Neovim Setup](./images/neovim.png)
 
 ## Note
 
