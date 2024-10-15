@@ -6,6 +6,9 @@ end
 conform.setup({
   formatters_by_ft = {
     javascript = { "prettierd" },
+    typescript = { "prettierd" },
+    javascriptreact = { "prettierd" },
+    typescriptreact = { "prettierd" },
   },
   format_on_save = {
     -- These options will be passed to conform.format()
