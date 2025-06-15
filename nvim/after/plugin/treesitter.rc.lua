@@ -33,10 +33,6 @@ ts.setup {
   auto_install = true,
   sync_install = false,
   ignore_install = {},
-  autotag = {
-    enable = true,
-  },
-
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
