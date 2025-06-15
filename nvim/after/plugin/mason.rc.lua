@@ -30,6 +30,7 @@ lspconfig.setup({
     "clangd",
     "jsonls",
     "tailwindcss",
+    "gopls",
   },
   automatic_installation = true,
 })
@@ -38,6 +39,7 @@ dap.setup({
   ensure_installed = {
     "codelldb",
     "debugpy",
+    "delve",
   },
   automatic_installation = true,
   handlers = {
@@ -57,6 +59,8 @@ lint.setup({
     "jsonlint",
   },
   automatic_installation = true,
+  quiet_mode = false,
+  ignore_install = {}
 })
 
 formatter.setup({

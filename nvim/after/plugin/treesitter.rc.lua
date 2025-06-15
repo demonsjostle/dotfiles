@@ -3,6 +3,7 @@ if (not status) then return end
 
 
 ts.setup {
+  modules = {},
   highlight = {
     enable = true,
     disable = {},
@@ -26,8 +27,12 @@ ts.setup {
     "javascript",
     "markdown",
     "markdown_inline",
-    "typescript"
+    "typescript",
+    "go"
   },
+  auto_install = true,
+  sync_install = false,
+  ignore_install = {},
   autotag = {
     enable = true,
   },
