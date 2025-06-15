@@ -5,6 +5,7 @@ if (not status_dapui) then return end
 
 dapui.setup()
 require("dap-python").setup("python")
+require('dap-go').setup()
 
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
