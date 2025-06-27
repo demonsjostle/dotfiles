@@ -24,7 +24,7 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.wrap = false -- No Wrap lines
+vim.opt.wrap = false         -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
@@ -53,6 +53,6 @@ vim.opt.formatoptions:append { 'r' }
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     -- Set your colorscheme here
-    vim.cmd("colorscheme catppuccin")
+    vim.cmd("colorscheme everforest")
   end,
 })
