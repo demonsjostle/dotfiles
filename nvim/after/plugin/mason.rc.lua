@@ -31,6 +31,7 @@ lspconfig.setup({
     "jsonls",
     "tailwindcss",
     "gopls",
+    "graphql",
   },
   automatic_installation = true,
 })
