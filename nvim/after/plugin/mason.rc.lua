@@ -57,6 +57,7 @@ lint.setup({
     "pylint",
     "cpplint",
     "jsonlint",
+    "golangcilint",
   },
   automatic_installation = true,
   quiet_mode = false,
