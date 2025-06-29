@@ -121,6 +121,18 @@ return require('packer').startup(function(use)
     }
   })
 
+  -- AI Cursor
+  use {
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+      'MeanderingProgrammer/render-markdown.nvim',
+    }
+  }
+
   -- Notification
   use { "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim" } }
   use 'rcarriga/nvim-notify'
