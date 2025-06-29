@@ -12,3 +12,4 @@ fish/fishd.tmp.*
 tmux/plugins/
 omf/
 weechat/
+packer_compiled.lua
