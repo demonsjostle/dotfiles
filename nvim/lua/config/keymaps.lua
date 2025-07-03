@@ -37,3 +37,20 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Yank Lsp Error
+local clipboard_icon = ""
+vim.keymap.set("n", "<leader>ce", function()
+  local row = vim.api.nvim_win_get_cursor(0)[1] - 1
+  local diags = vim.diagnostic.get(0, {
+    lnum = row,
+    severity = vim.diagnostic.severity.ERROR,
+  })
+  if #diags == 0 then
+    vim.notify("No Error in this line", vim.log.levels.INFO)
+    return
+  end
+  local msg = diags[1].message
+  vim.fn.setreg("+", msg)
+  vim.notify(clipboard_icon .. " Copied Error: " .. msg, vim.log.levels.INFO)
+end, { desc = "Yank LSP Error" })
