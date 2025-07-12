@@ -1,4 +1,4 @@
-# Cool and useful settings for terminal
+# Cool and useful settings for terminal - powerby @ [LazyVim](https://www.lazyvim.org/installation)
 
 ## OS Support
 - macOS
@@ -7,6 +7,7 @@
 - WSL (Windows Subsystem for Linux)
 
 ## Configs Support
+- Ghostty: version >= 1.1.3
 - **Tmux**: version >= 3.3a
 ![Tmux Setup](./images/tmux.png)
 - **Fish Shell**: version >= 3.6.4
@@ -30,7 +31,7 @@
 ## Configs 
 
 If you need to use Chat GPT in neovim. Please add API key from [OpenAI's API page](https://platform.openai.com/) to your shell enviroment.
-for me use [Fish shell](https://fishshell.com/) and add API key to .config/fish/config-local.fish 
+for me use [Fish shell](https://fishshell.com/) and add API key to .config/fish/config-local.fish all using [Avante](https://github.com/yetone/avante.nvim)
 ```bash
     set -gx OPENAI_API_KEY [API key]
 ```
