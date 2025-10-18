@@ -15,14 +15,20 @@ return {
   ---@module 'avante'
   ---@type avante.Config
   opts = {
-    -- add any opts here
-    -- for example
-    provider = "openai",
+    provider = "copilot",
     providers = {
+      copilot = {
+        model = "gpt-5",
+        timeout = 30000,
+        extra_request_body = {
+          temperature = 0.5,
+          max_tokens = 2048,
+        },
+      },
       openai = {
         endpoint = "https://api.openai.com/v1",
-        model = "gpt-4o-mini",
-        timeout = 30000, -- Timeout in milliseconds
+        model = "gpt-5",
+        timeout = 30000,
         extra_request_body = {
           temperature = 0.75,
           max_tokens = 2048,
@@ -34,7 +40,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
