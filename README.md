@@ -8,11 +8,19 @@
 
 ## Configs Support
 - Ghostty: version >= 1.1.3
-- **Tmux**: version >= 3.3a
+- **Tmux**: version >= 3.3a\
+*Install Tmux Plugin Manager [(TPM)](https://github.com/tmux-plugins/tpm)*
+```
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins
+```
+and then press `prefix + I` to install plugins
 ![Tmux Setup](./images/tmux.png)
-- **Fish Shell**: version >= 3.6.4
+- **Fish Shell**: version >= 3.6.4\
+*Install [Fisher](https://github.com/jorgebucaran/fisher) Plugin Manager*\
+*Install [Tide](https://github.com/IlanCosman/tide)*
 ![Fish Setup](./images/fish.png)
-- **Neovim**: version >= 0.10.1
+- **Neovim**: version >= 0.10.1\
+*Install [Neovim](https://neovim.io/)*
 ![Neovim Setup](./images/neovim.png)
 
 ## Note

@@ -15,3 +15,4 @@ weechat/
 packer_compiled.lua
 github-copilot/
 avante.nvim/
+fish_variables.*
